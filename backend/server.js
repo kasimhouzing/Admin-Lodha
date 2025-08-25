@@ -6,7 +6,7 @@ import jwt from 'jsonwebtoken';
 
 const { Client } = pkg;
 const app = express();
-const port = process.env.PORT || 3000; // Server is running on port 3000
+const port =  process.env.PORT || 10000; // Server is running on port 3000
 const JWT_SECRET = 'your-super-secret-jwt-key';
 // Middleware
 app.use(express.json());
@@ -18,7 +18,7 @@ app.use(cors({
 }));
 
 // PostgreSQL client configuration
-const client = new Client({
+const client = new Client({ 
     user: 'postgres',
     host: 'localhost',
     database: 'lodhaadmin',
